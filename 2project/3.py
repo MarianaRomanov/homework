@@ -9,4 +9,3 @@ a.pop(0)
 print(a)
 if 'world' in a:
     a.remove('world')
-
