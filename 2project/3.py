@@ -5,6 +5,8 @@ print(a[1][0])
 print(a[-1][-1])
 a.append('ginger')
 print(a)
+a.insert(len(a)//2, 'new')
+print(a)
 a.pop(0)
 print(a)
 if 'world' in a:

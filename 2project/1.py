@@ -15,8 +15,9 @@ print('Количество точек в d :', d.count('.'))
 
 e = 'Homework'
 print('e =', e)
-print('Строка 100 символов -', e.center(100, ' '))
-print('Длина строки -', len(str(e.center(100, ' '))))
+e = e.center(100)
+print('Строка 100 символов -', e)
+print('Длина строки -', len(str(e)))
 
 f = 'this IS My second HomeWork, I am at The park'
 print('f =', f)
