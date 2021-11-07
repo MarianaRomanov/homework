@@ -8,12 +8,8 @@ else:
 # 2
 b = input('Enter string:')
 if len(b) > 2:
-    if len(b) % 2 == 0:
-        b1 = b[:len(b) // 2]
-        b2 = b[len(b) // 2:]
-    else:
-        b1 = b[:len(b) // 2 + 1]
-        b2 = b[len(b) // 2 + 1:]
+    b1 = b[:(len(b) + 1) // 2]
+    b2 = b[(len(b) + 1) // 2:]
     newB = b2 + b1
     print('New string: ', newB)
 elif len(b) == 2:
@@ -43,18 +39,12 @@ else:
 a = float(input('Enter number:'))
 b = float(input('Enter number:'))
 c = float(input('Enter number:'))
-if a >= b >= c:
-    a, b, c = c, b, a
-elif a >= c >= b:
-    a, b, c = b, c, a
-elif b >= a >= c:
-    a, b, c = c, a, b
-elif b >= c >= a:
-    a, b, c = a, c, b
-elif c >= a >= b:
-    a, b, c = b, a, c
-elif c >= b >= a:
-    a, b, c = a, b, c
+if a > b:
+    a, b = b, a
+if a > c:
+    a, c = c, a
+if b > c:
+    b, c = c, b
 print(a, b, c)
 
 # 6
@@ -62,9 +52,9 @@ a = float(input('Enter number:'))
 b = float(input('Enter number:'))
 c = float(input('Enter number:'))
 if a == b == c:
+    print('3')
+elif a == b or b == c or a == c:
     print('2')
-elif (a == b or b == c or a == c) and (a != b or b != c or a != c):
-    print('1')
 else:
     print('0')
 
@@ -73,15 +63,14 @@ else:
 i = 0
 while i <= 10:
     print(i)
-    i = i + 1
+    i += 1
 
 # 7.2
 a = ''
 j = 20
 while j > 0:
-    a = a + str(j) + ' '
+    print(a + str(j), end=' ')
     j = j - 1
-print(a)
 
 # 7.3
 a = float(input('Enter number:'))
@@ -106,7 +95,7 @@ while s:
 # 8.3
 # 1st
 li1 = [1, 3, 65, 4, 76, 77, 86, 2, 90]
-li1 = sorted(li1)
+li1.sort()
 while li1:
     print(li1.pop(0))
 # 2nd
@@ -133,9 +122,9 @@ c = float(input('Enter number:'))
 
 def is_year_leap(c):
     if (c % 4 == 0 and c % 100 != 0) or c % 400 == 0:
-        return 'True'
+        return True
     else:
-        return 'False'
+        return False
 
 
 print(is_year_leap(c))
@@ -148,9 +137,9 @@ c = float(input('Enter number:'))
 
 def triangle(a, b, c):
     if a >= b + c or b >= a + c or c >= a + b:
-        return 'False'
+        return False
     else:
-        return 'True'
+        return True
 
 
 print(triangle(a, b, c))
@@ -162,7 +151,7 @@ We are not what we need to be.\n\
 But at least we are not what we used to be\n\
  (Football Coach)'
 # 10.1
-p = list(t.split())
+p = t.split()
 print(len(p))
 
 # 10.2
