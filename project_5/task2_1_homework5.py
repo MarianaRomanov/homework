@@ -25,5 +25,6 @@ class Rectangle:
                f'perimeter is {self.perimeter()}'
 
 
-r = Rectangle(12, 3)
-print(r)
+if __name__ == '__main__':
+    r = Rectangle(12, 3)
+    print(r)

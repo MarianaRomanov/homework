@@ -1,4 +1,4 @@
-from task1_1_homework5 import Person
+from project_5.task1_1_homework5 import Person
 
 
 class Employee(Person):
@@ -31,6 +31,7 @@ class Employee(Person):
                f'salary is {self.salary}'
 
 
-e = Employee('Test Prer', 1999, 'engineer', 2, 110)
-e.increase_salary(40)
-print(e)
+if __name__ == '__main__':
+    e = Employee('Test Prer', 1999, 'engineer', 2, 110)
+    e.increase_salary(40)
+    print(e)

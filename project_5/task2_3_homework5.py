@@ -29,7 +29,8 @@ class Point:
         return f'x={self.x}, y={self.y}, distance from origin - {self.distance_to_zero()}'
 
 
-c1 = Point(5, 1)
-c2 = Point(9, 4)
-print(c1)
-print(c1.distance_between_points(c2))
+if __name__ == '__main__':
+    c1 = Point(5, 1)
+    c2 = Point(9, 4)
+    print(c1)
+    print(c1.distance_between_points(c2))

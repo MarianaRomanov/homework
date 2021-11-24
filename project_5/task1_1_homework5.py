@@ -38,8 +38,9 @@ class Person:
                f'age is {self.count_years()}'
 
 
-p = Person('Test Prer', 1999)
-print(p)
+if __name__ == '__main__':
+    p = Person('Test Prer', 1999)
+    print(p)
 # print(p.get_name())
 # print(p.get_surname())
 # print(p.count_years())

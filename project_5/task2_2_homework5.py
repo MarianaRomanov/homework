@@ -41,6 +41,7 @@ class Student:
                f'scores {self.scores}, average score {self.average_score()}, year {self.years()}'
 
 
-s = Student('Test Yes', 'Math', 2018, scores=[1, 2, 8])
-s.new_score(4)
-print(s)
+if __name__ == '__main__':
+    s = Student('Test Yes', 'Math', 2018, scores=[1, 2, 8])
+    s.new_score(4)
+    print(s)

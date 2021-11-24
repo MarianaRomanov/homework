@@ -1,4 +1,4 @@
-from task1_2_homework5 import Employee
+from project_5.task1_2_homework5 import Employee
 
 
 class ITEmployee(Employee):
@@ -17,8 +17,8 @@ class ITEmployee(Employee):
         except AttributeError:
             self.skills = [new_skill]
 
-    def add_skills(self, new_skill=[]):
-        """Adds skill to employee"""
+    def add_skills(self, new_skill):
+        """Adds skills to employee"""
         for i in new_skill:
             try:
                 self.skills.append(i)
@@ -29,7 +29,8 @@ class ITEmployee(Employee):
         return f'Employee skills: {self.skills}'
 
 
-e1 = ITEmployee('Test Prer', 1999, 'engineer', 2, 110)
-e1.add_skill('yei')
-e1.add_skills(['ter', 453, 'trr'])
-print(e1)
+if __name__ == '__main__':
+    e1 = ITEmployee('Test Prer', 1999, 'engineer', 2, 110)
+    e1.add_skill('yei')
+    e1.add_skills(['ter', 453, 'trr'])
+    print(e1)
